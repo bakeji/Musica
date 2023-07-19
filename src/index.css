@@ -53,6 +53,10 @@ header{
     gap: 50px;
     
 }
+.sn-btn a {
+    display: none;
+}
+
 .first-nav{
     display: flex;
     padding: 10px;
@@ -382,11 +386,48 @@ input[type="range"]:focus::-webkit-slider-runnable-track{
    }
    .first-flex{
     display: block;
-    width: 85%;
+    width: 90%;
    }
    .sidenav{
-    display: none;
+    display: none; 
+    width: 100%;
+    height: 100%;
+    top: none;
+    right: none;
+    left: none;
+    bottom: none;
+    margin-left: 40px;
+    gap: 30px;
+ transition: 0.5s ease-out
    }
+   .side-open{
+    display: flex;
+}
+.hide{
+    display: none;
+}
+   .first-nav, .second-nav{
+    width: 100%;
+    gap: 50px;
+    height: auto;
+    background: none;
+   }
+   .sn-btn{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+   }
+   .sn-btn a{
+display:contents;
+font-family: Quicksand;
+font-size: 17px;
+font-style: normal;
+font-weight: 700;
+text-decoration: none;
+line-height: 120%;
+color:#EFEEE0;
+   }
+
    .artist-img{
     display: none;
    }
@@ -418,9 +459,7 @@ margin-bottom: 40px;
    .tc{
     overflow-x: scroll;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 10px;
     width: 100%;
    }
@@ -430,11 +469,26 @@ margin-bottom: 40px;
    .chartsmusic{
     width: 100%;
     height: 233px;
-    align-items: center;
+    align-items: normal;
+    gap: 160px;
+    padding: 18px;
    }
    .track{
     flex-direction: column;
+    gap: 20px;
    }
+   .track img{
+    width: 108px;
+height: 99px;
+   }
+   .chartsmusic .song-title{
+    width: max-content;
+    margin-bottom: 10px;
+   }
+   .chartsmusic .artist{
+    margin-bottom: 20px;
+   }
+
    .new-releases img, .popular img{
     width: 153px;
     height: 193px;
@@ -452,7 +506,7 @@ margin-bottom: 40px;
    .info{
     margin-bottom: 20px;
    }
-   .duration,
+   .nav-duration .duration,
     .volume,
     .repeate,
     .shuffle{

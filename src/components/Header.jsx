@@ -1,10 +1,10 @@
 import React from "react"
 
-export default function Header (){
+export default function Header (props){
     return(
         <header>
-             
-                <button className="ham"><img src="/hamburger.png" alt=""  /></button>
+                <button onClick={props.handleClick} className="ham">
+                    <img src="/hamburger.png" alt=""  /></button>
             
             <img src="/logo.png" alt="Logo" />
            

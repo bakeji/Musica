@@ -1,8 +1,8 @@
 import React from "react"
 
-export default function TopCharts(){
+export default function TopCharts(props){
     return(
-        <div className="topcharts">
+        <div className={`topcharts ${props.nav? "hide": ""}`}>
             <h2>Top charts</h2>
             <div className="tc">
             <div className="chartsmusic">
