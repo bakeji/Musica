@@ -18,13 +18,11 @@ export default function TopCharts(props){
             {props.topCharts.map((chart)=>(
             <div key={chart.id}  className="tc">
             <div className="chartsmusic">
-              
-
                 <div className="track">
     
                     <img src={chart.picture_small} alt="art cover" />
                     <div className="title">
-                      <Link to={`./tracks/${chart.title}`}>
+                      <Link style={{textDecoration:"none"}} to={`./tracks/${chart.title}`}>
                         <p className="song-title ">{chart.title}</p>
                         </Link>
                         <p className="artist">{chart.creator.name}</p>

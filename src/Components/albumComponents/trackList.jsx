@@ -1,11 +1,16 @@
 import React from "react";
 
 export default function TrackList(props){
+
+    const tracks =props.selectedChart.tracks.data
+            
     return(
         <div className="track-list">
+            {props.isFetched? tracks.map((tracks)=>(
+
              <div className="track-list-details">
                 <div className="art-like">
-                    <img src="./Rectangle 25.png" alt="" />
+                    <img src={tracks.album.cover_small} alt="" />
                     <button><img src="./Heart (2).png" alt="like" /></button>
                 </div>
 
@@ -13,18 +18,18 @@ export default function TrackList(props){
                         
                         <div className="deets1">
                 <div className="title-artist">
-                    <p> stand strong - Davido</p>
+                    <p> {tracks.title} - {tracks.artist.name}</p>
                 </div>
 
                 <div className="album">
-                    <p> African Giant</p>
+                    <p>{tracks.album.title}</p>
                 </div>
                 </div>
 
                 <div className="deets2">
 
                 <div className="song-duration">
-                    <p>4:17</p>
+                    <p>{tracks.duration}</p>
                 </div>
 
                 <div className="more-btn">
@@ -36,7 +41,10 @@ export default function TrackList(props){
                 </div>
             </div>
             
-
+            ))
+        :
+        ""
+        }
         </div>
     )
 }

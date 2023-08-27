@@ -14,7 +14,7 @@ export default function NewReleases(props){
             <div className="albumcards-carousel"> 
             {props.isFetched? album.map((tracks)=>(
                 <div key={tracks.id} className="albumcard">
-                    <img src={tracks.album.cover_small} alt="albumcard" />
+                    <img src={tracks.album.cover_medium} alt="albumcard" />
                     <p className="song-title"> {tracks.album.title}</p>
                     <p className="artist-name">{tracks.artist.name}</p>
                 </div>

@@ -22,8 +22,12 @@ export default function Album(props){
             <div className="in-flex">
             <AlbumDetails 
                 selectedChart={props.isFetched && selectedChart}
+                isFetched ={props.isFetched}
             />
-            <TrackList />
+            <TrackList 
+            selectedChart={props.isFetched && selectedChart}
+            isFetched ={props.isFetched}
+            />
             </div>
             
             </div>

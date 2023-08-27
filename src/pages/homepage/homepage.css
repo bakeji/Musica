@@ -95,6 +95,7 @@ font-size: 17px;
 font-style: normal;
 font-weight: 400;
 line-height: 20px;
+width: 150px;
 }
 .chartsmusic .artist{
     color:#ffffff;
@@ -124,11 +125,17 @@ line-height: 14px
     flex-direction: column;
     display: flex;
     gap: 20px;
+    width: 95%;
     overflow-y: scroll;
     margin-left: 11%;
 }
 .new-releases, .popular{
     height: 216px;
+}
+.new-releases img, .popular img{
+    width: 153px;
+height: 153px;
+border-radius: 25px;
 }
 .new-releases h2, .popular h2{
 font-family: Quicksand;
@@ -167,6 +174,7 @@ font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+text-align: center;
 }
 
 /* mobile view */
