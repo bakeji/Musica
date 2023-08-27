@@ -1,5 +1,7 @@
 import React from "react"
 export default function Curated(props){
+
+    
     return(
         <div className={`curated ${props.nav? "hide": ""}`}>
             <div className="playlist-info">

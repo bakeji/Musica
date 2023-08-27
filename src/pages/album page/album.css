@@ -1,0 +1,143 @@
+
+.album-details{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+.in-flex{
+    width: 100%;
+}
+.cover-art img{
+    width: 284px;
+height: 289px;
+border-radius: 37px;
+}
+.more-info{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 90px;
+}
+.info-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info-text h2{
+color: #A4C7C6;
+font-family: Quicksand;
+font-size: 35px;
+font-style: normal;
+font-weight: 700;
+line-height: 42px;
+}
+.info-text p{
+    color: #EFEEE0;
+font-family: Quicksand;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.8px;
+}
+.play-add-btns{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.play-add-btns button{
+    background-color: transparent;
+    display: flex;
+width: 87px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+border-radius: 32px;
+background: rgba(255, 255, 255, 0.07);
+backdrop-filter: blur(5px);
+width: fit-content;
+color: #FFFFFF;
+font-family: Quicksand;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 14.4px;
+}
+.track-list{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 12px;
+}
+.track-list::-webkit-scrollbar{
+    display: none;
+}
+.track-list-details{
+    display: flex;
+    width: 100%;
+    align-items: center;
+   gap: 15%;
+    border-radius: 15px;
+background: rgba(51, 55, 59, 0.37);
+backdrop-filter: blur(5px);
+height: 56px;
+}
+.track-list-details button{
+    background: transparent;
+}
+.art-like{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 12px;
+}
+.track-list p{
+    font-family: Quicksand;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+color: #FFFFFF;
+}
+.deets, .deets1, .deets2{
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+@media screen and (max-width:430px){
+  .album-details{
+    flex-direction: column;
+  }  
+  .cover-art img{
+    width: 100%;
+    gap:10px;
+  }
+  .more-info{
+    margin-top: 0px;
+  }
+  .track-list-details{
+    gap: 20px;
+  }
+  .art-like button{
+    display: none;
+  }
+  .deets{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    gap: 90%;
+  }
+  .deets1{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: normal;
+  }
+  .deets2{
+    display: flex;
+    gap: 2px;
+    flex-direction: column-reverse;
+    align-items: normal;
+  }
+}

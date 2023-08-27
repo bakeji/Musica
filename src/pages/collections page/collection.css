@@ -1,0 +1,106 @@
+.my-collections{
+    width: 100%;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+.buttons button{
+width: 120px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 27px;
+background:  #FACD66;
+color: #EFEEE0;
+text-align: center;
+font-family: Quicksand;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.8px;
+}
+
+.collections{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+
+.songs-cover{
+width: 213px;
+height: 234px;
+display: flex;
+align-items:center;
+gap: 70px;
+border-radius: 20px;
+border: 1px solid rgba(255, 255, 255, 0.03);
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(15, 18, 19, 0.85) 80.73%), url(/cover.png), lightgray 50% / contain no-repeat;
+}
+.artist-title{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    margin-top: 120px;
+}
+.artist-title .p1{
+    color:  #EFEEE0;
+text-align: center;
+font-family: Quicksand;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 28.8px;
+}
+.artist-title .artist, span p{
+    color: var(--light, #EFEEE0);
+text-align: center;
+font-family: Quicksand;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height:  12px
+}
+.play-btn{
+    margin-top: 120px;
+}
+.play-btn button{
+display: flex;
+width: 48px;
+height: 48px;
+border-radius: 50%;
+background: #FACD66;
+padding: 4px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+span, .play-btn{
+    display: none;
+}
+
+@media screen and (max-width:430px){
+  .buttons button{
+    
+width: 168px;
+padding: 10px;
+  }  
+  .collections{
+    flex-direction: column;
+    
+  }
+   .artist-title{
+    margin-top: 8px;
+  }
+
+  .songs-cover{
+    width: 95%;
+    gap: 180px;
+    justify-content: center;
+  }
+  span, .play-btn{
+    display: contents;
+  }
+}

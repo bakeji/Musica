@@ -13,7 +13,8 @@ export default function Header (props){
                 <button><img src="/search.png" alt="Search" /></button>
                 <input
                 placeholder="search artists..."
-                type="text" />
+                type="text"
+                id="search" />
             </div>
         </header>
     )
