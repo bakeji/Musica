@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import Header from "../../Components/homepagecomponents/header";
 import SideNav from "../../Components/homepagecomponents/sidenav";
 import Curated from "../../Components/homepagecomponents/curated";
-import TopCharts from "../../Components/homepagecomponents/topCharts";
-import NewReleases from "../../Components/homepagecomponents/newreleases";
+import TopCharts from "../../Components/homepagecomponents/TopCharts";
+import NewReleases from "../../Components/homepagecomponents/NewReleases";
 import Popular from "../../Components/homepagecomponents/popular";
 import MusicPlayer from "../../Components/homepagecomponents/musicplayer";
 import "./homepage.css"
@@ -45,6 +45,7 @@ const [nav, setNav] =useState(false)
             <NewReleases 
              newRelease ={props.isFetched && props.chartsArray[0]}
              isFetched={props.isFetched}
+
             />
            
         

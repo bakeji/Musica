@@ -4,11 +4,15 @@ import {  Route, Routes, BrowserRouter } from 'react-router-dom'
 import HomePage from "./pages/homepage/HomePage";
 import Collections from "./pages/collections page/Collections";
 import Album from "./pages/album page/Album";
+import { musicPlayerContext } from "./Components/context/musicplayer";
 
 export default function App(){
     const [chartsArray, setChartsArray]= useState([])
     const [isFetched, setIsFetched]= useState(false)
-
+    const [trackId, setTrackId] = useState("")
+    const [trackSrc, setTrackSrc] = useState("")
+    const [isClicked, setIsClicked] = useState(false)
+    const[isPlaying, setIsPlaying] =useState(false)
   // fetch API
   function fetchApi(){
     const apiKey= import.meta.env.VITE_API_KEY;
@@ -46,29 +50,36 @@ export default function App(){
     useEffect(()=>{
          fetchApi()
         
-        console.log(chartsArray)
-        
+
     }, [])
-    console.log(isFetched)
+
+
+
+
+  
 
       
 
   return(
     <div className="app">
+      <musicPlayerContext.Provider value={{isPlaying, setIsPlaying, setIsClicked, isClicked, trackId, setTrackId, trackSrc, setTrackSrc}} >
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage
         chartsArray={chartsArray}
-        isFetched ={isFetched}
-        />} />
+        isFetched ={isFetched} 
+        />} 
+        />
         <Route path="/tracks/:chartTitle"  element={<Album
         chartsArray={chartsArray}
         isFetched ={isFetched}
-         />} />
+         />}
+          />
         <Route path="/collections" element={<Collections />} />
         
         </Routes>
         </BrowserRouter>
+        </musicPlayerContext.Provider>
     </div>
   )
 }

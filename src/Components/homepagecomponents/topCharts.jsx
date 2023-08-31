@@ -1,5 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { nanoid } from 'nanoid';
+import LikeBtn from "../button";
+
+// const id = nanoid()
 
 export default function TopCharts(props){
 //   const seconds=props.topCharts.duration: ""
@@ -8,14 +12,13 @@ export default function TopCharts(props){
 //   const remainingSeconds = seconds % 60;
 //   const duration=`${hours} : ${minutes} : ${remainingSeconds}`
 // console.log(seconds)  
-
     
 
     return(
       
         <div className={`topcharts ${props.nav? "hide": ""}`}>
             <h2>Top charts</h2>
-            {props.topCharts.map((chart)=>(
+            {props.topCharts.map((chart, id)=>(
             <div key={chart.id}  className="tc">
             <div className="chartsmusic">
                 <div className="track">
@@ -28,15 +31,20 @@ export default function TopCharts(props){
                         <p className="artist">{chart.creator.name}</p>
                         <p className="duration">{chart.duration}</p>
                     </div>
-                </div>
+                </div>                                                            
                 
 
     
-              <button><img src="/orangeheart.png" alt="" /></button>
+                <LikeBtn />
             </div>  
         </div>
+        
 
-           )) }
+           )) 
+           }
+          
+         
+           
         </div>
     )
 }

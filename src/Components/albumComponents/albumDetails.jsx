@@ -1,4 +1,5 @@
 import React from "react";
+import LikeBtn from "../button";
 export default function AlbumDetails(props){
     
     return(
@@ -15,9 +16,9 @@ export default function AlbumDetails(props){
                 </div>
 
                 <div className="play-add-btns">
-                    <button><img src="public\Play (2).png" alt="play-icon" /> <span>play all</span> </button>
-                    <button> <img src="./music-square-add.png" alt="add-icon" /> <span>Add to collection</span></button>
-                    <button><img src="./Heart (3).png" alt="like icon" /></button>
+                    <button><img src="/Play (2).png" alt="play-icon" /> <span>play all</span> </button>
+                    <button> <img src="/music-square-add.png" alt="add-icon" /> <span>Add to collection</span></button>
+                   <LikeBtn />
                 </div>
             </div>
 

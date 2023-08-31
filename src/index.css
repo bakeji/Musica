@@ -130,12 +130,18 @@ line-height: 12px;
 }
 .music-nav button{
     background: transparent;
+    cursor: pointer;
 }
 .music-nav .play{
     width: 19px;
     height: 19px;
     background: #FACD66;
     border-radius: 50%;
+}
+button .pause{
+    width: 9px;
+    height: 10px;
+    filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(32deg) brightness(103%) contrast(103%);
 }
 .volume{
     gap: 10px;
@@ -204,7 +210,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track{
 .ham{
     display: none;
 }
-
+.filter{
+filter: invert(59%) sepia(9%) saturate(3632%) hue-rotate(314deg) brightness(81%) contrast(128%);
+}
 /* mobile view */
 @media screen and (max-width:430px){
    header{

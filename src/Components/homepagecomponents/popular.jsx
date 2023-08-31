@@ -1,9 +1,9 @@
 import React from "react"
 export default function popular(props){
-    console.log(props.isFetched)
+
 
     const album =props.isFetched? props.popular.tracks.data : ""
-
+        // console.log(album)
     return(
         <div className="popular">
             <h2>Popular</h2>
