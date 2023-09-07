@@ -176,6 +176,11 @@ font-weight: 400;
 line-height: normal;
 text-align: center;
 }
+.music-nav .onshuffle{
+    border: #ffffff;
+    background-color: #000000;
+    border-radius: 50%;
+}
 
 /* mobile view */
 @media screen and (max-width:430px){

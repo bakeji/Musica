@@ -9,8 +9,10 @@ import { musicPlayerContext } from "./Components/context/musicplayer";
 export default function App(){
     const [chartsArray, setChartsArray]= useState([])
     const [isFetched, setIsFetched]= useState(false)
-    const [trackId, setTrackId] = useState("")
-    const [trackSrc, setTrackSrc] = useState("")
+    const [tracks, setTracks]=useState("")
+    const [currentTrackId, setCurrentTrackId] = useState({})
+    const [currentTrackSrc, setCurrentTrackSrc] = useState("")
+    const [songIndex, setSongIndex]=useState("")
     const [isClicked, setIsClicked] = useState(false)
     const[isPlaying, setIsPlaying] =useState(false)
   // fetch API
@@ -62,7 +64,7 @@ export default function App(){
 
   return(
     <div className="app">
-      <musicPlayerContext.Provider value={{isPlaying, setIsPlaying, setIsClicked, isClicked, trackId, setTrackId, trackSrc, setTrackSrc}} >
+      <musicPlayerContext.Provider value={{songIndex,setSongIndex, isPlaying, tracks, setTracks, setIsPlaying, setIsClicked, isClicked, currentTrackId, setCurrentTrackId, currentTrackSrc, setCurrentTrackSrc }} >
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage

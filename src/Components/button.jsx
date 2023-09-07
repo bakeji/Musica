@@ -8,7 +8,6 @@ export default function LikeBtn (){
         }
 
         useEffect(()=>{
-            console.log(isClicked)
         }, [isClicked])
     return(
         <button onClick={()=>toggleLikedBtn()} >
