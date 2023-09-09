@@ -176,7 +176,7 @@ font-weight: 400;
 line-height: normal;
 text-align: center;
 }
-.music-nav .onshuffle{
+.music-nav .onshuffle, .music-nav .repeat{
     border: #ffffff;
     background-color: #000000;
     border-radius: 50%;
