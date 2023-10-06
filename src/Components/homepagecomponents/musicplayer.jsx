@@ -115,6 +115,7 @@ export default function MusicPlayer() {
 
   const handleVolumeChange = (e) => {
     setVol(e.target.value);
+    
   };
 
   return (
@@ -175,7 +176,9 @@ export default function MusicPlayer() {
             value={seekBarValue}
             onChange={handleChange}
             step={0.01}
-            className="dur-slider"
+            style={{
+              background: `linear-gradient(to right, yellow 2%, white ${(seekBarValue / seekBarMax) * 100}%)`
+            }}
           />
         </div>
       </div>
@@ -190,6 +193,9 @@ export default function MusicPlayer() {
           step="1"
           value={vol}
           onChange={handleVolumeChange}
+          style={{
+            background: `linear-gradient(to right, yellow 4%, white ${vol}%)`
+          }}
         />
       </div>
     </div>
