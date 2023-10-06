@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../Components/homepagecomponents/header";
 import SideNav from "../../Components/homepagecomponents/sidenav";
-import MusicPlayer from "../../Components/homepagecomponents/musicplayer";
+import MusicPlayer from "../../Components/homepagecomponents/MusicPlayer";
 import AlbumDetails from "../../Components/albumComponents/albumDetails";
 import TrackList from "../../Components/albumComponents/trackList";
 import "./album.css";
@@ -36,6 +36,16 @@ export default function Album(props) {
     setSongIndex(id)
   };
 
+  const playAll=()=>{
+    setCurrentTrackId(tracks[0]);
+    setCurrentTrackSrc(tracks[0].preview)
+    setIsPlaying(true);
+    setIsClicked(true);
+    setTracks(tracks);
+    setSongIndex(0)
+
+  }
+
   useEffect( () =>{}, [currentTrackId]);
 
   return (
@@ -48,6 +58,7 @@ export default function Album(props) {
           <AlbumDetails
             selectedChart={props.isFetched && selectedChart}
             isFetched={props.isFetched}
+            playAll ={playAll}
           />
           <TrackList
             selectedChart={props.isFetched && selectedChart}

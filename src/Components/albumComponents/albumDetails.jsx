@@ -16,8 +16,8 @@ export default function AlbumDetails(props){
                 </div>
 
                 <div className="play-add-btns">
-                    <button><img src="/Play (2).png" alt="play-icon" /> <span>play all</span> </button>
-                    <button> <img src="/music-square-add.png" alt="add-icon" /> <span>Add to collection</span></button>
+                    <button  onClick={props.playAll} ><img src="/Play (2).png" alt="play-icon" /> play all </button>
+                    <button> <img src="/music-square-add.png" alt="add-icon" /> Add to collection</button>
                    <LikeBtn />
                 </div>
             </div>
