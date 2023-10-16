@@ -1,3 +1,6 @@
+.albumpage{
+  width: 95%;
+}
 
 .album-details{
     display: flex;
@@ -64,12 +67,16 @@ font-style: normal;
 font-weight: 400;
 line-height: 14.4px;
 }
+.deets{
+  cursor: pointer;
+}
+
 .track-list{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
     gap: 12px;
+    margin-bottom: 130px;
 }
 .track-list::-webkit-scrollbar{
     display: none;
@@ -111,13 +118,47 @@ width: 150px;
 height: 39px;
 border-radius: 8.531px;
 }
-@media screen and (max-width:430px){
+@media screen and (max-width:1165px){
+  .track-list-details{
+    gap: 4%;
+  }
+  .deets, .deets1, .deets2{
+    gap: 60px;
+  }
+
+}
+@media screen and (max-width:885px) {
+  .track-list-details{
+    gap: 2%;
+  }
+  .deets, .deets1, .deets2{
+    gap: 10%;
+  }
+}
+@media screen and (max-width:750px) {
+  .track-list-details{
+    gap: 1%;
+  }
+  .deets, .deets1, .deets2{
+    gap: 1%;
+  }
+  .album-details{
+    gap: 10px;
+  }
+  .play-add-btns{
+    gap: 8px;
+  }
+  
+
+}
+@media screen and (max-width:528px){
   .album-details{
     flex-direction: column;
   }  
   .cover-art img{
     width: 100%;
     gap:10px;
+    height: 370px;
   }
   .more-info{
     margin-top: 0px;
@@ -125,14 +166,16 @@ border-radius: 8.531px;
   .track-list-details{
     gap: 20px;
   }
+  .track-list p{
+    width: 120px;
+  }
   .art-like button{
     display: none;
   }
   .deets{
     display: flex;
-    gap: 70px;
+    gap: 90px;
     align-items: center;
-    gap: 90%;
   }
   .deets1{
     display: flex;

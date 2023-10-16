@@ -3,20 +3,20 @@ import LikeBtn from "../button";
 
 export default function TrackList(props){
 
-    const tracks =props.selectedChart.tracks.data
-        // console.log(tracks)            
+    const tracks =props.selectedChart.tracks.data    
     return(
         <div  className="track-list">
             {props.isFetched? tracks.map((tracks, index)=>(
 
              <div key={index} 
-             onClick={() =>props.handleTracks(index)} 
+             
               className="track-list-details">
                 <div className="art-like">
                     <img className="track-img" src={tracks.album.cover_small} alt="" />
                     <LikeBtn />
                 </div>
-                    <div className="deets">
+                    <div className="deets"  onClick={() =>props.handleTracks(index)} >
+                        
 
                         <div className="deets1">
                 <div className="title-artist">

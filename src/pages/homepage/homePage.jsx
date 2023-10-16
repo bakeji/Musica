@@ -3,7 +3,7 @@ import Header from "../../Components/homepagecomponents/header";
 import SideNav from "../../Components/homepagecomponents/sidenav";
 import Curated from "../../Components/homepagecomponents/curated";
 import TopCharts from "../../Components/homepagecomponents/TopCharts";
-import NewReleases from "../../Components/homepagecomponents/NewReleases";
+import NewReleases from "../../Components/homepagecomponents/newreleases";
 import Popular from "../../Components/homepagecomponents/popular";
 import MusicPlayer from "../../Components/homepagecomponents/musicplayer";
 import "./homepage.css"
@@ -16,7 +16,15 @@ const [nav, setNav] =useState(false)
     const handleClick=()=>{
         setNav(prev =>!prev)
     }
-        
+        const onMuseDown=(e)=>{
+            e.preventDefault()
+        }
+        const mouseMove=(e)=>{
+            if(e.buttons ===1){
+
+            }
+
+        }
         
     return(
         <div className="homepage">
@@ -30,11 +38,13 @@ const [nav, setNav] =useState(false)
                 <Curated
                 nav={nav} 
                />
+               
                 <TopCharts
                 topCharts={props.chartsArray}
                 nav={nav}
                 isFetched ={props.isFetched}
                 />
+            
             </div>
            
 

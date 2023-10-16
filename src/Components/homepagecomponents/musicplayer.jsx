@@ -69,14 +69,13 @@ export default function MusicPlayer() {
       setSongIndex(randomTrack);
       setCurrentTrackId(tracks[randomTrack]);
       setCurrentTrackSrc(tracks[randomTrack].preview);
-      console.log(randomTrack);
     }
     else{
       nextBtn()
     }
   };
 
-  useEffect(()=>{console.log(isShuffle)},[isShuffle])
+  useEffect(()=>{},[isShuffle])
 
 
   // repeat button
@@ -128,10 +127,12 @@ export default function MusicPlayer() {
         src={isClicked ? currentTrackSrc : ""}
       />
       <div className="song-info">
+        {isClicked &&
         <img
-          src={isClicked ? currentTrackId.album.cover_small : ""}
+          src={currentTrackId.album.cover_small}
           alt="art cover"
         />
+}
         <div className="info">
           <p className="song-title">{isClicked ? currentTrackId.title : ""}</p>
           <p className="artist">
@@ -162,7 +163,7 @@ export default function MusicPlayer() {
             <img src="/next.png" alt="next" />
           </button>
           <button onClick={repeat} 
-          className={isRepeat? "repeat" : ""}>
+          className={ `repeate1 ${isRepeat? "repeat" : ""}`}>
             <img src="/repeate-one.png" alt="repeat" />
           </button>
         </div>

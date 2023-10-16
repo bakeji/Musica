@@ -15,9 +15,10 @@ export default function TopCharts(props){
     
 
     return(
+        <div className="topcharts1">
+        <h2 className="h2">Top charts</h2>
       
         <div className={`topcharts ${props.nav? "hide": ""}`}>
-            <h2>Top charts</h2>
             {props.topCharts.map((chart, id)=>(
             <div key={chart.id}  className="tc">
             <div className="chartsmusic">
@@ -31,7 +32,8 @@ export default function TopCharts(props){
                         <p className="artist">{chart.creator.name}</p>
                         <p className="duration">{chart.duration}</p>
                     </div>
-                </div>                                                            
+                </div>   
+                                                                         
                 
 
     
@@ -45,6 +47,7 @@ export default function TopCharts(props){
           
          
            
+        </div>
         </div>
     )
 }

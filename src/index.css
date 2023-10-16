@@ -10,13 +10,15 @@ button{
 body{
     background-color: #1d2123;
     overflow-x: hidden;
-    min-width: 100vh;
+    width: 100%;
+    min-height: 100vh;
     scroll-behavior: smooth;
 }
-.homepage{
-    width: 90%;
-    height: 832px;
+.app{
+    width: 100%;
+    height: 100vh;
 }
+
 header{
     display: flex;
     gap: 160px;
@@ -46,12 +48,7 @@ header{
     outline: none;
     border-color: none;
 }
-.first-flex{
-    display: flex;
-    width: 100%;
-    gap: 50px;
-    padding: 30px;
-}
+
 .sidenav{
     display: flex;
     flex-direction: column;
@@ -94,7 +91,7 @@ background: rgba(29, 33, 35, 0.30);
 backdrop-filter: blur(15px);
 display: flex;
 align-items: center;
-gap: 60px;
+gap: 40px;
 position: fixed; 
 bottom: 0;
 }
@@ -103,7 +100,9 @@ bottom: 0;
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 120px;
 }
+
 .info .song-title{
     color: #ffffff;
 font-family: Quicksand;
@@ -124,7 +123,11 @@ line-height: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50%;
     gap: 40px;
+}
+.nav-duration .duration{
+    width: 100%;
 }
 
 .music-nav {
@@ -155,7 +158,7 @@ button .pause{
     height: 4px;
     appearance: none;
     border-radius: 50px;
-    width: 749px;
+    width: 80%;
   }
 
   input[type=range]:focus {
@@ -210,8 +213,30 @@ button .pause{
 .filter{
 filter: invert(59%) sepia(9%) saturate(3632%) hue-rotate(314deg) brightness(81%) contrast(128%);
 }
+
+
+@media screen and (max-width:1024px) {
+    .artist-img,.artist-img img{
+        width: 290px;
+        height:368.8px;
+    }
+    
+}
+@media screen and (max-width:885px) {
+    .musicplayer .nav-duration{
+        width: 35%;
+    }
+    .musicplayer .volume{
+        width: 30%;
+    }
+    .volume input[type="range"] {
+        width: 60%;
+    }
+
+}
+
 /* mobile view */
-@media screen and (max-width:430px){
+@media screen and (max-width:528px){
    header{
     gap: 40px;
     width: 85%;
@@ -229,7 +254,10 @@ filter: invert(59%) sepia(9%) saturate(3632%) hue-rotate(314deg) brightness(81%)
     width: 120px;
    }
    .first-flex{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 90%;
    }
    .sidenav{
@@ -274,19 +302,19 @@ color:#EFEEE0;
 
    .musicplayer{
     height: 125px;
-    gap: 40px;
+    gap: 140px;
    }
+   
    .info .song-title{
-    width: max-content;
+    width: 20%;
    }
    .info{
     margin-bottom: 20px;
    }
    .nav-duration .duration,
     .volume,
-    .repeate,
+    .repeate1,
     .shuffle{
     display: none;
    }
-   
 }

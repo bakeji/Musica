@@ -1,9 +1,17 @@
-.homepage, .albumpage{
-    width: 90%;
-    height: 832px;
+ 
+.homepage{
+    width: 95%;
+
+}
+.first-flex{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 20px;
 }
 .curated{
-    width: 676px;
+    width: 50.6%;
     height: 350px;
     padding: 10px;
     border-radius: 40px;
@@ -59,12 +67,13 @@ font-style: normal;
 font-weight: 400;
 line-height: 17px;
 }
-.topcharts{
+.topcharts, .topcharts1{
     display: flex;
     flex-direction: column;
+    width: 40%;
     gap: 30px;
 }
-.topcharts h2{
+.h2{
     color:  #EFEEE0;
 font-family: Quicksand;
 font-size: 24px;
@@ -73,13 +82,13 @@ font-weight: 700;
 line-height: 29px;
 }
 .chartsmusic{
-    width: 417px;
+    width: 400px;
     border-radius: 20px;
     background: #1A1E1F;
     height: 96px;
     display: flex;
     align-items: center;
-    gap: 120px;
+    gap: 110px;
     padding: 0 0 0 20px;
 }
 .track{
@@ -121,15 +130,16 @@ line-height: 14px
     border-radius: 50%;
 }
 .scroll{
-    height: 626px;
+    height: 686px;
     flex-direction: column;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     width: 95%;
     margin-left: 11%;
 }
 .new-releases, .popular{
     height: 216px;
+    
 }
 .new-releases img, .popular img{
     width: 153px;
@@ -153,10 +163,14 @@ margin-bottom: 10px;
     width: 95%;
     gap:15px;
     overflow: scroll;
+    scroll-snap-type: block;
+    scroll-snap-align: center;
+    cursor: grab;
     display: flex; 
 }
 .albumcards-carousel::-webkit-scrollbar, .scroll::-webkit-scrollbar{
     display: none;
+    cursor: grab;
 }
 .albumcard{
 display: flex;
@@ -181,10 +195,72 @@ text-align: center;
     border-radius: 50%;
 }
 
-/* mobile view */
-@media screen and (max-width:430px){
-  
+@media screen and (max-width:1024px) {
+    .first-flex{
+        gap: 20px;
+    }
+    .curated{
+        width: 45.6%;
+    }
+    .playlist-info{
+        margin-left: 10px;
+    }
+    .artist-img,.artist-img img{
+        width: 290px;
+        height:368.8px;
+    }
+    .chartsmusic{
+        width: 380px;
+        gap: 70px;
+    }
+    
+}
 
+@media screen and (max-width:885px) {
+.first-flex{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    row-gap: 80px;
+}
+.curated{
+    width: 90%;
+}
+.topcharts{
+    width: 95%;
+    grid-column: 2/2;
+    margin-bottom: 40px;
+}
+ .chartsmusic{
+    width: 100%;
+    height: 180px;
+     gap: 190px; 
+}
+ .track{
+    gap: 30px;
+}
+.track img{
+    height: 120px;
+    width: 120px;
+}
+
+
+}
+@media screen and (max-width:650px){
+     .chartsmusic{
+        gap: 80px;
+    }
+
+}
+
+/* mobile view */
+@media screen and (max-width:528px){
+    .homepage{
+        width: 100%;
+    }
+    .first-flex{
+        row-gap: 10px;
+    }
    .artist-img{
     display: none;
    }
@@ -210,41 +286,48 @@ margin-bottom: 40px;
     width: 90%;
     gap: 15px;
    }
-   .topcharts{
+   .topcharts1{
     width: 100%;
    }
-   .tc{
+   .topcharts{
+    width: 100%;
+    grid-column: none;
+    display: flex;
+    gap: 50px;
     overflow-x: scroll;
+    flex-direction: row;
+   }
+   
+   .tc{
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 100%;
+    width: 80%;
    }
-   .tc::-webkit-scrollbar{
+   .topcharts::-webkit-scrollbar{
     display: none;
    }
    .chartsmusic{
     width: 100%;
-    height: 233px;
+    height: 253px;
     align-items: normal;
-    gap: 160px;
+    gap: 110px;
     padding: 18px;
    }
    .track{
     flex-direction: column;
     gap: 20px;
+    width: 30%;
    }
    .track img{
     width: 108px;
 height: 99px;
    }
-   .chartsmusic .song-title{
-    width: max-content;
+   .chartsmusic .song-title, .chartsmusic .duration, .chartsmusic .artist{
     margin-bottom: 10px;
+    margin-left: 50px;
    }
-   .chartsmusic .artist{
-    margin-bottom: 20px;
-   }
+  
 
    .new-releases img, .popular img{
     width: 153px;
@@ -258,5 +341,9 @@ height: 99px;
    }
    .info{
     margin-bottom: 20px;
+   }
+   .scroll{
+    width: 100%;
+    margin-left: 8%;
    }
 }
