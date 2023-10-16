@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {  Route, Routes, BrowserRouter } from 'react-router-dom'
-import HomePage from "./pages/homepage/HomePage";
-import Collections from "./pages/collections page/Collections";
+import HomePage from "./pages/homepage/homePage";
+import Collections from "./pages/collections page/collections";
 import Album from "./pages/album page/Album";
 import { musicPlayerContext } from "./Components/context/musicplayer";
 
