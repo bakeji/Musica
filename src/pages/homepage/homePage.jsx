@@ -16,15 +16,9 @@ const [nav, setNav] =useState(false)
     const handleClick=()=>{
         setNav(prev =>!prev)
     }
-        const onMuseDown=(e)=>{
-            e.preventDefault()
-        }
-        const mouseMove=(e)=>{
-            if(e.buttons ===1){
+    
 
-            }
-
-        }
+        
         
     return(
         <div className="homepage">
