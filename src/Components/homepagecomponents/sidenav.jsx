@@ -1,12 +1,15 @@
 import React from "react"
+import { Link } from "react-router-dom"
 export default function SideNav(props){
     return(
         <div className={`sidenav ${props.nav? "side-open" : ""}`}>
             <div className="first-nav">
+            <Link to={"/"} >
                 <button className="sn-btn">
                 <img src="/Home.png" alt="home" />
-                <a href="#">Home</a>
+                       <a href="#">home</a>
                 </button>
+                </Link>
                 <button className="sn-btn">
                     <img src="/playlist.png" alt="playlist" />
                     <a href="#">My collections</a>

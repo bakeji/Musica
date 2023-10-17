@@ -1,29 +1,21 @@
-import React,{useState} from "react";
+import React,{useContext} from "react";
 import Header from "../../Components/homepagecomponents/header";
 import SideNav from "../../Components/homepagecomponents/sidenav";
 import Curated from "../../Components/homepagecomponents/curated";
 import TopCharts from "../../Components/homepagecomponents/TopCharts";
 import NewReleases from "../../Components/homepagecomponents/newreleases";
 import Popular from "../../Components/homepagecomponents/popular";
+import { musicPlayerContext } from "../../Components/context/musicplayer";
 import MusicPlayer from "../../Components/homepagecomponents/musicplayer";
 import "./homepage.css"
 
 export default function HomePage(props){
+    const {nav} = useContext(musicPlayerContext)
 
-const [nav, setNav] =useState(false)
-
-
-    const handleClick=()=>{
-        setNav(prev =>!prev)
-    }
-    
-
-        
-        
     return(
         <div className="homepage">
             <Header 
-            handleClick={handleClick}/>
+            handleClick={props.handleClick}/>
 
             <div className="first-flex">
                 <SideNav 
@@ -54,7 +46,6 @@ const [nav, setNav] =useState(false)
            
         
 
-
         
              
             <Popular
@@ -66,9 +57,6 @@ const [nav, setNav] =useState(false)
 
 
             <MusicPlayer   />
-           
-            
-
         </div>
     )
 }

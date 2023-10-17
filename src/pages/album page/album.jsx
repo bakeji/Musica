@@ -17,6 +17,7 @@ export default function Album(props) {
     setCurrentTrackId,
     setCurrentTrackSrc,
     setSongIndex,
+    nav
   } = useContext(musicPlayerContext);
 
  
@@ -50,20 +51,24 @@ export default function Album(props) {
 
   return (
     <div className="albumpage">
-      <Header />
+      <Header 
+      handleClick = {props.handleClick}/>
       <div className="first-flex">
-        <SideNav />
+        <SideNav 
+        nav ={nav} />
 
         <div className="in-flex">
           <AlbumDetails
             selectedChart={props.isFetched && selectedChart}
             isFetched={props.isFetched}
             playAll ={playAll}
+            nav={nav}
           />
           <TrackList
             selectedChart={props.isFetched && selectedChart}
             isFetched={props.isFetched}
             handleTracks={handleTracks}
+            nav ={nav}
           />
         </div>
       </div>

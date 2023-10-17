@@ -190,3 +190,9 @@ border-radius: 8.531px;
     align-items: normal;
   }
 }
+@media screen and (max-width:350px){
+  .track-list p{
+  width: 70px;
+}
+
+}

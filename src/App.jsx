@@ -15,6 +15,7 @@ export default function App(){
     const [songIndex, setSongIndex]=useState("")
     const [isClicked, setIsClicked] = useState(false)
     const[isPlaying, setIsPlaying] =useState(false)
+    const [nav, setNav] =useState(false)
   // fetch API
   function fetchApi(){
     const apiKey= import.meta.env.VITE_API_KEY;
@@ -51,9 +52,11 @@ export default function App(){
     }
     useEffect(()=>{
          fetchApi()
-        
-
     }, [])
+
+    const handleClick=()=>{
+      setNav(prev =>!prev)
+  }
 
 
 
@@ -64,16 +67,18 @@ export default function App(){
 
   return(
     <div className="app">
-      <musicPlayerContext.Provider value={{songIndex,setSongIndex, isPlaying, tracks, setTracks, setIsPlaying, setIsClicked, isClicked, currentTrackId, setCurrentTrackId, currentTrackSrc, setCurrentTrackSrc }} >
+      <musicPlayerContext.Provider value={{songIndex,setSongIndex,nav, isPlaying, tracks, setTracks, setIsPlaying, setIsClicked, isClicked, currentTrackId, setCurrentTrackId, currentTrackSrc, setCurrentTrackSrc }} >
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage
         chartsArray={chartsArray}
+        handleClick = {handleClick}
         isFetched ={isFetched} 
         />} 
         />
         <Route path="/tracks/:chartTitle"  element={<Album
         chartsArray={chartsArray}
+        handleClick={handleClick}
         isFetched ={isFetched}
          />}
           />
