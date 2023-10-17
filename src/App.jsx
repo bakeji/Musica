@@ -3,7 +3,7 @@ import axios from "axios";
 import {  Route, Routes, BrowserRouter } from 'react-router-dom'
 import HomePage from "./pages/homepage/homePage";
 import Collections from "./pages/collections page/collections";
-import Album from "./pages/album page/Album";
+import Album from "./pages/album page/album";
 import { musicPlayerContext } from "./Components/context/musicplayer";
 
 export default function App(){
