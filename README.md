@@ -13,6 +13,8 @@ A web application for playing and exploring music using the Deezer API. This app
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
+- [HostedLink](#hostedLink)
+- [Demo](#demo)
 - [Acknowledgments](#acknowledgments)
 
 ## Homepage
@@ -60,6 +62,13 @@ If you would like to contribute to this project, please follow these guidelines:
 - Make your changes.
 - Test your changes thoroughly.
 - Submit a pull request with a clear description of your contributions.
+
+## HostedLink
+[MUSICA](https://musi-ca.netlify.app/)
+
+
+## Demo
+
 
 
 ## Acknowledgments

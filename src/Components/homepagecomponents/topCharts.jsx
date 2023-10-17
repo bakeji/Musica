@@ -31,10 +31,6 @@ export default function TopCharts(props){
                         <p className="duration">{chart.duration}</p>
                     </div>
                 </div>   
-                                                                         
-                
-
-    
                 <LikeBtn />
             </div>  
         </div>
