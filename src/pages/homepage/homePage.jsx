@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import Header from "../../Components/homepagecomponents/header";
 import SideNav from "../../Components/homepagecomponents/sidenav";
 import Curated from "../../Components/homepagecomponents/curated";
-import TopCharts from "../../Components/homepagecomponents/TopCharts";
+import TopCharts from "../../Components/homepagecomponents/topCharts";
 import NewReleases from "../../Components/homepagecomponents/newreleases";
 import Popular from "../../Components/homepagecomponents/popular";
 import { musicPlayerContext } from "../../Components/context/musicplayer";
