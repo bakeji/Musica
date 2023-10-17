@@ -25,33 +25,50 @@ export default function HomePage(props){
                 nav={nav} 
                />
                
+               <>
+               {props.isFetched?
                 <TopCharts
                 topCharts={props.chartsArray}
                 nav={nav}
                 isFetched ={props.isFetched}
                 />
+
+                :
+                (
+                <div className="loading-container">
+            <div className="loading-spinner"></div>
+          </div>
+                )
+               }
+               
+                </>
             
             </div>
            
 
 
             <div className={`scroll ${nav? "hide": ""}`}>
+                {props.isFetched?
             
+            <>
       
             <NewReleases 
              newRelease ={props.isFetched && props.chartsArray[0]}
              isFetched={props.isFetched}
 
             />
-           
-        
-
-        
-             
+  
             <Popular
             popular={props.isFetched && props.chartsArray[1]}
             isFetched ={props.isFetched}
             />
+            </>
+
+            :
+            <div className="loading-container">
+            <div className="loading-spinner"></div>
+          </div>
+                }
             </div>
 
 

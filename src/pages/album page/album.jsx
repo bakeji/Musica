@@ -64,12 +64,18 @@ export default function Album(props) {
             playAll ={playAll}
             nav={nav}
           />
+          {props.isFetched? 
           <TrackList
             selectedChart={props.isFetched && selectedChart}
             isFetched={props.isFetched}
             handleTracks={handleTracks}
             nav ={nav}
           />
+          :
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+          </div>
+}
         </div>
       </div>
       <MusicPlayer />
